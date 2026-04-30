@@ -1,0 +1,27 @@
+{
+  "entities": {
+    "Booking": {
+      "title": "Booking",
+      "description": "Appointment reservation details for GlowUp Salon.",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Customer full name" },
+        "phone": { "type": "string", "description": "Customer phone number" },
+        "email": { "type": "string", "description": "Customer email address" },
+        "address": { "type": "string", "description": "Customer address" },
+        "service": { "type": "string", "description": "Selected salon service" },
+        "date": { "type": "string", "description": "Preferred appointment date" },
+        "time": { "type": "string", "description": "Preferred appointment time" },
+        "notes": { "type": "string", "description": "Additional customer notes" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Timestamp of booking creation" }
+      },
+      "required": ["name", "phone", "email", "address", "service", "date", "time", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "Collection of all appointment reservations."
+    }
+  }
+}
