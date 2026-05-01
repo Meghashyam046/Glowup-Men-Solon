@@ -74,4 +74,4 @@ export const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-export const WHATSAPP_NUMBER = '919876543210'; // Indian Number Placeholder
+export const WHATSAPP_NUMBER = '7993148967'; // Indian Number Placeholder
